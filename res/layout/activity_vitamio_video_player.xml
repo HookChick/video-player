@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center" >
+    
+    <!-- Vitamio万能播放视频播放的界面布局 -->
+	<com.njau.mobileplayer.view.VitamioVideoView
+	    android:id="@+id/vitamio_videoview"
+	    android:layout_centerInParent="true"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    />
+	<!-- 包含视频播放的控制界面 -->
+    <include layout="@layout/media_controller"/>
+    
+	<!-- 包含播放网络视频时卡顿的界面-->
+    <include layout="@layout/buffer_caton"/>
+    
+    <!-- 视频加载界面的布局 -->
+    <include layout="@layout/video_begin_loading"/>
+    
+	
+</RelativeLayout>

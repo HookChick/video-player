@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.njau.mobileplayer" >
+
+	<!-- 顶部标题栏 -->
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="55dp"
+	    android:orientation="horizontal"
+	    android:gravity="center_vertical"
+	    android:background="#ff3097fd">
+	    
+	    <ImageView 
+	        android:id="@+id/user_clicked_login"
+	        android:src="@drawable/user_clicked_login"
+	        android:contentDescription="@string/user_clicked_login"
+	        android:layout_marginStart="10dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+	    
+	    <TextView 
+	        android:id="@+id/tv_search"
+	        android:drawablePadding="3dp"
+	        android:layout_weight="1"
+	        android:layout_marginStart="8dp"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/tv_search"
+	        android:textSize="14sp"
+	        android:clickable="true"
+	        android:background="@drawable/tv_search_background_selector"
+	        android:textColor="@drawable/tv_search_textcolor_selector"
+	        android:drawableStart="@drawable/tv_search_drawable_selector"/>
+	    
+	    <ImageView 
+	        android:id="@+id/tv_history_record"
+	        android:src="@drawable/ic_tophistory_record"
+	        android:contentDescription="@string/ic_tophistory_record"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginEnd="8dp"
+	        android:layout_marginStart="5dp"/>
+	    
+	</LinearLayout>
+	
+	<!-- 中间 -->
+	<FrameLayout 
+	    android:id="@+id/fl_main_content"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"/>
+	
+	<!-- 底部 -->
+	 <RadioGroup
+        android:id="@+id/rg_bottom_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#11000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        >
+        <RadioButton
+            android:id="@+id/rb_native_video"
+            android:drawableTop="@drawable/rb_native_video_selector"
+            android:text="@string/rb_native_video"
+            style="@style/botttom_tag_style"
+           />
+        
+        <RadioButton
+            android:id="@+id/rb_net_video"
+            android:text="@string/rb_net_video"
+            android:drawableTop="@drawable/rb_net_video_selector"
+            style="@style/botttom_tag_style"
+           />
+        
+        <RadioButton
+            android:id="@+id/rb_recommend_video"
+            android:text="@string/rb_recommend_video"
+            android:drawableTop="@drawable/rb_recommend_video_selector"
+            style="@style/botttom_tag_style"
+           />
+        
+        <RadioButton
+            android:id="@+id/rb_vip_video"
+            android:text="@string/rb_vip_video"
+            android:drawableTop="@drawable/rb_vip_video_selector"
+            style="@style/botttom_tag_style"
+           />
+	</RadioGroup>
+
+</LinearLayout>

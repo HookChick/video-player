@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical"  >
+    
+     <!-- 顶部标题栏 -->
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:orientation="horizontal"
+	    android:gravity="center_vertical"
+	    android:background="@android:color/darker_gray"
+	    >
+	    
+	    <TextView 
+	        android:id="@+id/qr_back_btn"
+	        android:text="@string/back_btn"
+	        android:textColor="#5BA5CB"
+	        android:layout_marginStart="20dp"
+	        android:textSize="35sp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:clickable="true"
+	        />
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="二维码付款"
+	        android:layout_centerInParent="true"
+	        android:textSize="20sp"
+	        android:textColor="#000000"/>
+	    
+	    <Button 
+	        android:id="@+id/do_scan_qrimage"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginEnd="10dp"
+	        android:text="扫描"
+	        android:background="@android:color/darker_gray"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentEnd="true"/>
+	</RelativeLayout>
+	
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	    <ImageView 
+	        android:id="@+id/show_qr_image"
+	        android:layout_width="300dp"
+	        android:layout_height="300dp"
+	        android:contentDescription="二维码的图片"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/bg_item"/>
+	</RelativeLayout>
+	
+
+</LinearLayout>

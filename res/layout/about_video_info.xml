@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <!-- 详情视频的图片部分 -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_img"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true" >
+        
+        <ImageView
+            android:id="@+id/detail_video_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:contentDescription="详情页预览图片"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_player_loading_background" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/center_collect_play" />
+    </RelativeLayout>
+    <!-- 图片底下的评分部分包括推荐指数 -->
+
+    <RelativeLayout
+        android:id="@+id/rat_video_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/relativeLayout_img"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/detail_video_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:textSize="15sp"
+            android:text="名字" />
+
+        <TextView
+            android:id="@+id/tuijianzhishu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_video_name"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:text="推荐指数:" />
+
+        <RatingBar
+            android:id="@+id/zhishu_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall" 
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/detail_video_name"
+            android:layout_toEndOf="@id/tuijianzhishu"
+            android:rating="4" />
+    </RelativeLayout>
+    <!-- 中间的间隔 -->
+
+    <View
+        android:id="@+id/below_tuijian"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/rat_video_name"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#E6E6E6" />
+    <!-- 视频详情部分 -->
+
+    <RelativeLayout
+        android:id="@+id/xiangqingLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/below_tuijian"
+         >
+
+        <TextView
+            android:id="@+id/video_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="3dp"
+            android:text="类型:" />
+        
+        <TextView
+            android:id="@+id/detail_video_type"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/video_type"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:text="类型的内容" />
+        
+        <TextView
+            android:id="@+id/video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_below="@id/video_type"
+            android:layout_marginTop="3dp"
+            android:text="时长:" />
+        
+        <TextView
+            android:id="@+id/detail_video_duration"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/video_duration"
+            android:layout_below="@id/detail_video_type"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:text="时长的内容" />
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_below="@id/video_duration"
+            android:layout_marginTop="3dp"
+            android:text="标题:" />
+        <TextView
+            android:id="@+id/detail_video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/detail_video_duration"
+            android:layout_toEndOf="@id/video_title"
+            android:text="标题的内容" />
+
+        <TextView
+            android:id="@+id/video_gaiyao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_title"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="3dp"
+            android:text="概要:" />
+        <TextView
+            android:id="@+id/detail_video_gaiyao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_toEndOf="@id/video_gaiyao"
+            android:layout_below="@id/detail_video_title"
+            android:layout_marginTop="3dp"
+            android:text="概要内容" />
+    </RelativeLayout>
+    <!-- 详情展示下的间隔 -->
+    <View
+        android:id="@+id/below_xiangqing"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/xiangqingLinearLayout"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#E6E6E6" />
+
+    
+    <LinearLayout
+        android:id="@+id/horizontalSc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/below_xiangqing" >
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginStart="10dp"
+		    android:layout_marginTop="4dp"
+		    android:textSize="20sp"
+		    android:text="猜你喜欢"/>
+        <GridView
+            android:id="@+id/tuijian_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:horizontalSpacing="3dip"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="10dip">
+        </GridView>
+        <TextView 
+            android:id="@+id/norecommend_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="亲，蜗牛网速哦"/>
+    </LinearLayout>
+
+</RelativeLayout>

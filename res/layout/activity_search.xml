@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 顶部的搜索标题栏 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:background="#ff3097fd">
+        
+       <EditText
+	        android:id="@+id/et_search"
+	        android:drawablePadding="3dp"
+	        android:layout_weight="1"
+	        android:layout_marginStart="8dp"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/tv_search"
+	        android:textSize="14sp"
+	        android:clickable="true"
+	        android:background="@drawable/tv_search_background_selector"
+	        android:textColor="@drawable/tv_search_textcolor_selector"
+	        android:drawableStart="@drawable/tv_search_drawable_selector"/> 
+	        
+       <ImageView
+           android:id="@+id/voice_search"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:contentDescription="语音输入的按钮图片"
+           android:layout_marginStart="6dp"
+           android:src="@drawable/voice_empty"/> 
+           
+       <TextView
+           android:id="@+id/video_search"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="搜索"
+           android:textColor="#ffffff"
+           android:layout_marginStart="8dp"
+           android:layout_marginEnd="8dp"/> 
+    </LinearLayout>
+    
+    <!-- 下面搜索到的内容显示 -->
+    <RelativeLayout 
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       
+        <ListView 
+            android:id="@+id/search_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" />
+        
+        <ProgressBar 
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+        
+        <TextView 
+            android:id="@+id/search_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抱歉,没有您搜索的内容..."
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

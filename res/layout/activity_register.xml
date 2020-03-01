@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical" >
+
+    <!-- 顶部标题栏 -->
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:orientation="horizontal"
+	    android:gravity="center_vertical"
+	    android:background="#008DDE"
+	    >
+	    
+	    <TextView 
+	        android:id="@+id/reg_back_btn"
+	        android:text="@string/back_btn"
+	        android:textColor="#5BA5CB"
+	        android:layout_marginStart="20dp"
+	        android:textSize="35sp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:clickable="true"
+	        />
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="注册"
+	        android:layout_centerInParent="true"
+	        android:textSize="20sp"
+	        android:clickable="true"
+	        android:textColor="#000000"/>
+	    
+	</RelativeLayout>
+	
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:stretchColumns="1" >
+
+        <TableRow android:layout_marginTop="50dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="用户输入姓名的图标"
+                android:src="@drawable/register_head" />
+
+            <EditText
+                android:id="@+id/register_username"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/login_register_editshape"
+                android:hint="请输入姓名" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="用户输入密码的图标"
+                android:src="@drawable/register_pwd" />
+
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/login_register_editshape"
+                android:hint="请输入密码"
+                android:inputType="textPassword" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="用户输入确认密码的图标"
+                android:src="@drawable/register_pwd" />
+
+            <EditText
+                android:id="@+id/register_confirmpassword"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/login_register_editshape"
+                android:hint="请确认密码"
+                android:inputType="textPassword" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_height="50dp"
+            android:layout_width="290dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/register_submit"
+            android:onClick="doRegister" />
+    </RelativeLayout>
+
+</LinearLayout>

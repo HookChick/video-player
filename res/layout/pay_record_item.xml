@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="视频:"/>
+    <TextView 
+        android:id="@+id/pay_record_name"
+        android:layout_toEndOf="@id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="青云志"/>
+    
+    <TextView 
+        android:id="@+id/desc_label"
+        android:layout_below="@id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="描述:"/>
+     <TextView 
+        android:id="@+id/pay_record_desc"
+        android:layout_toEndOf="@id/desc_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/name_label"
+        android:text="张晓饭"/>
+    
+    <TextView 
+        android:id="@+id/money_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/desc_label"
+        android:text="购买金额:"/>
+    <TextView 
+        android:id="@+id/pay_record_money"
+        android:layout_toEndOf="@id/money_label"
+        android:layout_below="@id/desc_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="￥0.0"/>
+    
+    <TextView 
+        android:id="@+id/time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/money_label"
+        android:text="购买时间:"/>
+    <TextView 
+        android:id="@+id/pay_record_time"
+        android:layout_toEndOf="@id/time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/money_label"
+        android:text="2017-06-01 21:00:00"/>
+    
+    <View 
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#44000000"/>
+
+</RelativeLayout>

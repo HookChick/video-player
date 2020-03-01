@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical" >
+
+    <!-- 顶部标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/chongzhi_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:clickable="true"
+            android:text="@string/back_btn"
+            android:textColor="#5BA5CB"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="充值"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp" >
+
+        <TextView
+            android:id="@+id/chongzhi_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:text="充值金额:"/>
+
+        <EditText
+            android:id="@+id/pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/chongzhi_label"
+            android:layout_marginStart="20dp"
+            android:hint="输入充值金额"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/chongzhi_btn"
+        android:onClick="doChongzhi"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:text="确认充值"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:background="#1AAD19" />
+
+</LinearLayout>

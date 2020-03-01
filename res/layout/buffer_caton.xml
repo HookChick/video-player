@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buffer_caton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:padding="3dp"
+    android:background="#33000000"
+    android:visibility="gone">
+    
+    <!-- 视频卡顿时出现的效果 -->
+	<ProgressBar 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"/>
+	
+	<TextView 
+	    android:id="@+id/video_buffer_netspeed"
+	    android:layout_width="wrap_content"
+	    android:layout_marginStart="3dp"
+	    android:text="缓冲中...00kb/s"
+	    android:textColor="#ffffff"
+	    android:gravity="center"
+	    android:layout_height="wrap_content"
+	    />
+</LinearLayout>

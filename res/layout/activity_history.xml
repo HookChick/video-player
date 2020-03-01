@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    
+    <!-- 顶部标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/history_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/history_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:clickable="true"
+            android:text="@string/back_btn"
+            android:textColor="#5BA5CB"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="历史播放记录"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+        
+        <TextView
+            android:id="@+id/clear_history_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:text="清空"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+     <!-- 历史播放视频文件的列表 -->
+    <ListView
+        android:id="@+id/historyvideo_listview"
+        android:divider="@null"
+        android:layout_below="@id/history_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+	<!-- 发现没有历史播放视频时显示的文本信息 -->
+    <TextView 
+        android:id="@+id/tv_norecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="没有播放历史记录..."
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        />
+</RelativeLayout>

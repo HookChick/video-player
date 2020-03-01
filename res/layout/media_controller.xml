@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/media_controller"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    
+    <!-- 顶部的控制面板，包括状态栏，声音调节栏 -->
+    <LinearLayout 
+        android:id="@+id/top_controller"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        
+        <!-- 状态栏 -->
+        <LinearLayout 
+	        android:id="@+id/show_status_controller"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/bg_player_status"
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+            
+            <TextView
+            android:id="@+id/video_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="视频名称"
+            android:textColor="#ffffff" />
+            
+            <ImageView 
+                android:id="@+id/system_battery"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="系统电量变化"
+                android:src="@drawable/ic_battery_10"/>
+            
+            <TextView 
+                android:id="@+id/system_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="#ffffff"/>
+            
+        </LinearLayout>
+        
+        <!-- 声音调节栏 -->
+        <LinearLayout 
+	        android:id="@+id/voice_controller"
+	        android:background="@drawable/bg_player_top_control"
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:gravity="center_vertical"
+	        android:layout_height="wrap_content">
+         	
+            <Button 
+                android:id="@+id/bt_voice_closeoropen"
+                android:background="@drawable/bt_voice_closeoropen_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            
+            <SeekBar 
+                android:id="@+id/seekbar_voice"
+                android:layout_weight="1"
+                android:minHeight="4dp"
+                android:maxHeight="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/progress_thumb"/>
+            
+            <Button 
+                android:id="@+id/bt_system_changesystem"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bt_system_changesystem_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    
+    <!-- 底部的控制面板，包括播放进度，基本控制的按钮播放下一个上一个 -->
+    <LinearLayout 
+        android:id="@+id/bottom_controller"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 视频进度显示栏 -->
+        <LinearLayout
+	        android:id="@+id/bottom_seekbar"
+	        android:background="@drawable/bg_player_bottom_seekbar"
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:gravity="center_vertical"
+	        android:layout_height="wrap_content">
+         	
+            <TextView 
+                android:id="@+id/video_current_time"
+                android:text="00:00"
+                android:textColor="#ffffff"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            
+            <SeekBar 
+                android:id="@+id/seekbar_video"
+                android:layout_weight="1"
+                android:minHeight="4dp"
+                android:maxHeight="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/progress_thumb"/>
+            
+            <TextView 
+                android:id="@+id/video_duration"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="00:00"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        
+        <!-- 底部视频控制栏，上一个下一个暂停退出全屏等 -->
+        <LinearLayout 
+	        android:id="@+id/bottom_video_controller"
+	        android:background="@drawable/bg_player_bottom_control"
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:gravity="center_vertical"
+	        android:layout_height="wrap_content">
+         	
+            <Button 
+                android:id="@+id/bottom_bt_exit"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bt_exit_selector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            
+            <Button 
+                android:id="@+id/bottom_bt_video_pre"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bt_video_pre_selector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            
+            <Button 
+                android:id="@+id/bottom_bt_video_pauseandplay"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bt_video_pause_selector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            
+            <Button 
+                android:id="@+id/bottom_bt_video_next"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bt_video_next_selector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            
+            <Button 
+                android:id="@+id/bottom_bt_video_switch_fullscreen"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bt_video_fullscreen_selector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            
+        </LinearLayout>
+    </LinearLayout>
+    
+</RelativeLayout>

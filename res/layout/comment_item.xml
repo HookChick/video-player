@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+    <ImageView 
+        android:id="@+id/comment_headpic"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        android:contentDescription="评论者头像的图片"/>
+    
+	<TextView 
+	    android:id="@+id/comment_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="25dp"
+	    android:paddingTop="5dp"
+	    android:gravity="center_vertical"
+        android:text="小张:"
+        android:textColor="#0000FF"
+        android:textSize="12sp"/>
+	
+	<TextView
+	    android:id="@+id/comment_content"
+	    android:layout_width="wrap_content"
+	    android:layout_marginStart="10dp"
+	    android:layout_height="25dp"
+	    android:paddingTop="5dp"
+	    android:gravity="center_vertical"
+        android:text="给你说了多少回了，一定要时刻准备着！"
+        android:textColor="#88000000"
+        android:textSize="10sp"/>
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+        <!-- android:layout_gravity="center_vertical" -->  
+    <HorizontalScrollView 
+        android:id="@+id/horizontalScrollView" 
+        android:layout_width="wrap_content"  
+        android:layout_height="44dp"  
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF"  
+        android:scrollbars="none" >  
+  
+        <RadioGroup  
+            android:id="@+id/id_gallery_type"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_gravity="center_vertical"  
+            android:orientation="horizontal" >
+            <RadioButton android:id="@+id/radioButtonall" 
+                style="@style/nettv_top_type_style"
+                android:text="全部" android:layout_marginStart="8dp" />  
+            <RadioButton android:id="@+id/radioButton1"
+                style="@style/nettv_top_type_style"
+                android:text="动画"/>  
+            <RadioButton android:id="@+id/radioButton2"
+                style="@style/nettv_top_type_style"
+                android:text="冒险"/>  
+            <RadioButton android:id="@+id/radioButton3" 
+                style="@style/nettv_top_type_style"
+                android:text="喜剧"/>  
+            <RadioButton android:id="@+id/radioButton4"
+                style="@style/nettv_top_type_style"
+                android:text="家庭"/>  
+            <RadioButton android:id="@+id/radioButton6"
+                style="@style/nettv_top_type_style"
+                android:text="动作"/>  
+            <RadioButton android:id="@+id/radioButton7"
+                style="@style/nettv_top_type_style"
+                android:text="奇幻"/>  
+            <RadioButton android:id="@+id/radioButton8"
+                style="@style/nettv_top_type_style"
+                android:text="恐怖"/>  
+            <RadioButton android:id="@+id/radioButton9"
+                style="@style/nettv_top_type_style"
+                android:text="科幻"/>  
+            <RadioButton android:id="@+id/radioButton10"
+                style="@style/nettv_top_type_style"
+                android:text="惊悚"/>  
+            <RadioButton android:id="@+id/radioButton11"
+                style="@style/nettv_top_type_style"
+                android:text="剧情"/>  
+            <RadioButton android:id="@+id/radioButton13"
+                style="@style/nettv_top_type_style"
+                android:text="悬疑"/>  
+            <RadioButton android:id="@+id/radioButton14"
+                style="@style/nettv_top_type_style"
+                android:text="犯罪"
+                android:layout_marginEnd="8dp"/>  
+        </RadioGroup>  
+    </HorizontalScrollView> 
+     <!-- 分类下面的横线 -->
+    <View 
+        android:id="@+id/xianbelowtype"
+        android:layout_below="@id/horizontalScrollView"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#44000000"/>
+    
+    <!-- 网络视频文件的列表 -->
+    <com.njau.mobileplayer.xlistview.XListView 
+        android:id="@+id/netvideo_listview"
+        android:layout_below="@id/xianbelowtype"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    <!-- 发现没有网络时显示的文本信息 -->
+    <TextView 
+        android:id="@+id/tv_nonet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="没有网络..."
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:visibility="gone"/>
+    
+    <!-- 加载网络视频文件时的滚动圆 -->
+    <ProgressBar 
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+       />
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+body { font-size:12px; background:#fff; color:#333; line-height:25px; margin:0; padding:10px 0; font-family:宋体; }
+h2,h4,p,ul,li,dl,dt,dd,form,input { margin:0; padding:0; }
+img { border:0; }
+.wrap { width:800px; margin:0px auto; }
+.input-text { padding:2px 4px; border:1px solid #79a4cf; }
+.input-button { border:none; }
+a:link, a:visited { color:#06C; text-decoration:none; }
+a:hover, a:active { text-decoration:underline; }
+.box { border:2px solid #79a4cf; }
+.box h2 { background:#79a4cf; line-height:35px; font-size:14px; padding:0 10px; color:#fff; }
+.box .content { font-size:14px; padding:20px 40px; }
+
+#login { margin:10px auto; }
+#login .main { background:#79a4cf url(../images/banner.jpg) no-repeat; height:154px; padding-left:190px; position:relative; }
+#login .main .corner { float:right; background:url(../images/banner.jpg); width:20px; height:154px; }
+#login .main .introduce { color:#066220; line-height:30px; padding:10px; }
+#login .main .introduce h2 { font-size:14px; }
+#login .main .introduce p { text-indent:2em; }
+#login .main .login { position:absolute; background:#fff; right:40px; top:-20px; border:1px solid #939393; padding:15px; width:220px; }
+#login dl { line-height:40px; padding:10px; }
+#login dl dt { float:left; clear:left; width:50px; }
+#login dl dd { margin-left:50px; }
+#login dl dd input { vertical-align:middle; }
+#login dl dd .input-text { margin:8px 0px; width:134px; }
+#login dl dd .input-text-over { border-color:#72bb09; }
+#login dl dd .input-button { width:77px; height:32px; padding-left:10px; font-weight:bold; background:url(../images/button_login.gif) left center no-repeat; color:#333; }
+#login dl dd .input-button-over { background:url(../images/button_login_over.gif) no-repeat; color:#000; }
+#login .error { color:#f00; text-align:center; clear:both; }
+
+#footer { border-top:1px solid #79a4cf; margin-top:30px; text-align:center; line-height:30px; color:#666; }
+#register { width:600px; margin:20px auto; }
+#register dl { line-height:40px; }
+#register dl dt { float:left; clear:left; width:80px; text-align:right; }
+#register dl dd { margin-left:80px; }
+#register dl dd input { margin:8px 0; font-size:14px; }
+#register dl dd .input-button { background:url(../images/button_register.gif); width:120px; height:30px; }
